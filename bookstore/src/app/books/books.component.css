@@ -1,0 +1,41 @@
+.card {
+  height: 100%;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+  object-position: center top;
+}
+
+.card-body {
+  padding: 15px;
+  margin-top: -5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text {
+  flex-grow: 1;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.card-title, .card-text + .card-text {
+  margin-bottom: 8px;
+}
+
+.btn-primary {
+  margin-top: auto;
+  width: 100%;
+}
+
+.addToCartBtn{
+  background-color: #F2A900;
+}

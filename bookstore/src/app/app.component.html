@@ -1,0 +1,30 @@
+<div class="cont">
+  <div class="row">
+    <div class="col-lg-8 mt-5">
+      <h1>Books</h1>
+      <div class="row">
+          <app-books *ngFor="let book of books" class="col-lg-4 mt-1 mb-1"  [book]="book" (addBook)="insertBook($event)"></app-books>
+      </div>
+     
+    </div>
+    <div class="col-lg-4 mt-4">
+      <div class="d-flex">
+      <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+      </div>
+      <h4 class="cart-text mt-4 ms-3">Cart</h4>
+    </div>
+      
+      <ol class="list-group list-group-numbered mt-2">
+        <app-cart
+          *ngFor="let item of cartItems"
+          [item]="item"
+          (increase)="increaseCount($event)"
+          (decrease)="decreaseCount($event)"
+          (removeFromCart) = "removeItem($event)">
+        </app-cart>
+      </ol>
+      <h1>Total : Rs.{{total}}</h1>
+    </div>
+  </div>
+</div>
